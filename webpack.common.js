@@ -28,7 +28,7 @@ module.exports = {
         test: /\.(ts|js)x?$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-Loader',
+          loader: 'babel-loader',
           options: {
             presets: [
               '@babel/preset-env',
@@ -45,16 +45,12 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|svg|jpg|jpeg)$/i,
-        type: 'asset/resource',
+        test: /\.svg$/,
+        use: ['@svgr/webpack', 'url-loader'],
       },
       {
         test: /\.(s[ac]|c)ss$/i,
-        use: ['style-Loader', 'css-Loader'],
-      },
-      {
-        test: /\.(mov|mp4)$/,
-        type: 'asset/resource',
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },

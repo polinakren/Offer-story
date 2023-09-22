@@ -1,0 +1,66 @@
+export const Palette = {
+  bg_1: "#D6DFFF",
+  bg_2: "#D6FFFF",
+  bg_3: "#DACDFF",
+
+  c_primary_50: "#F3F1FF",
+  c_primary_100: "#E2DEFF",
+  c_primary_200: "#D6D0FF",
+  c_primary_300: "#CAC1FF",
+  c_primary_400: "#B3A7FF",
+  c_primary_500: "#9887FE",
+  c_primary_600: "#735CFF",
+  c_primary_700: "#5E4AD4",
+  c_primary_800: "#4E3EB0",
+  c_primary_900: "#3A2D85",
+
+  c_secondary_50: "#ECEAF9",
+  c_secondary_100: "#D6D3E8",
+  c_secondary_liner: "#DAD5E4",
+  c_secondary_200: "#C9C6DA",
+  c_secondary_300: "#BCB5D0",
+  c_secondary_400: "#AEA6C7",
+  c_secondary_500: "#958CB1",
+  c_secondary_600: "#7C7591",
+  c_secondary_700: "#6A6381",
+  c_secondary_800: "#594F77",
+  c_secondary_900: "#443C59",
+
+  c_third_100: "#AB9DD1",
+  c_third_200: "#968ABD",
+  c_third_300: "#8B84A0",
+
+  c_additional_1: "#AD9FFF",
+  c_additional_2: "#AEF8FF",
+
+  c_additional_red_50: "#FFD8D8",
+  c_additional_red_100: "#AA5550",
+
+  c_additional_yellow_50: "#FFF6C7",
+  c_additional_yellow_100: "#AE8157",
+  c_additional_yellow_200: "#FFC955",
+
+  c_additional_green_50: "#DDFFD8",
+  c_additional_green_100: "#63925B",
+
+  c_additional_blue_50: "#F2F5FF",
+  c_additional_blue_100: "#3478EB",
+  c_additional_blue_200: "#0058ED",
+  c_additional_blue_300: "#0045BA",
+
+  c_white_50: "#FFFFFF",
+  c_white_100: "#F1F1F1",
+  c_white_200: "#E4E4E4",
+  c_white_300: "#DEDCE4",
+  c_white_400: "#D3D1D9",
+  c_white_500: "#C8C6CE",
+  c_white_600: "#ABA6BA",
+
+  c_shadow_btn_w: "rgba(222, 220, 228, 0.35)",
+  c_shadow_btn_w_pressed: "rgba(222, 220, 228, 0.05)",
+  c_shadow_btn_p: "rgba(115, 92, 255, 0.35)",
+  c_shadow_btn_p_pressed: "rgba(115, 92, 255, 0.05)",
+  c_shadow_block: "rgba(176, 165, 209, 0.4)",
+  c_shadow_block_hovered: "rgba(176, 165, 209, 0.2)",
+  c_shadow_block_pressed: "rgba(176, 165, 209, 0.14)",
+};

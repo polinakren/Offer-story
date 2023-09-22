@@ -1,8 +1,9 @@
 import { Button as AntButton, ButtonProps as AntButtonProps } from 'antd';
 import styled from '@emotion/styled';
+
 import { Palette } from '~utils/styles/Palette';
 
-type ButtonProps = AntButtonProps & { size?: 'small' | 'medium' | 'large' };
+type ButtonProps = AntButtonProps;
 
 export const Button = ({ children, ...props }: ButtonProps) => {
   const ButtonComponent = props.color === 'white' ? WhiteButton : PurpleButton;
@@ -63,7 +64,7 @@ const buttonSizes = {
     borderRadius: '16px',
     padding: '11px 24px',
   },
-  medium: {
+  middle: {
     height: '56px',
     fontSize: '16px',
     borderRadius: '20px',

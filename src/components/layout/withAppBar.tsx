@@ -1,10 +1,10 @@
+import React, { LazyExoticComponent } from 'react';
 import styled from '@emotion/styled';
 import { Layout } from 'antd';
-import React, { LazyExoticComponent } from 'react';
 
+import { Palette } from '~utils/styles/Palette';
 import { Logo } from '../logo';
 import { Button } from '../buttons';
-import { Palette } from '~utils/styles/Palette';
 
 export const withAppBar = (Component: LazyExoticComponent<() => JSX.Element>) => () => {
   const handleLoginClick = () => {

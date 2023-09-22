@@ -1,7 +1,7 @@
 import React from 'react';
+import styled from '@emotion/styled';
 
 import { FontSizes } from '~utils/styles/fontSizes';
-import styled from '@emotion/styled';
 
 export const Text = ({
   color,

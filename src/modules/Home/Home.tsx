@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 import starStruck from '~assets/images/icons/Star-struck.svg';
 import search from '~assets/images/icons/Search.svg';
-import { Button, Input, Text } from '~components';
+import { Button, Form, Input, Text } from '~components';
 import { Palette } from '~utils/styles/Palette';
 import { Company } from '~modules/Home/Company';
 
@@ -28,12 +28,12 @@ export default function Home() {
           <Text styleName={'extra_bold_6'} color={Palette.c_secondary_800}>
             Как пройти в компанию мечты и получить оффер?
           </Text>
-          <Options>
-            <Input size={'large'} placeholder={'Введите название компании'} />
-            <Button color={'purple'} size={'middle'}>
+          <StyledForm layout={'horizontal'} initialValues={{ company: '' }}>
+            <Input width={'100%'} size={'large'} placeholder={'Введите название компании'} name={'company'} />
+            <Button htmlType='submit' color={'purple'} size={'middle'}>
               <img src={search} alt={'search'} />
             </Button>
-          </Options>
+          </StyledForm>
         </Searcher>
         <Company name={'Яндекс'} rating={3.5} />
         <Company name={'Google'} rating={4.0} />
@@ -87,9 +87,8 @@ const Searcher = styled.div`
   }
 `;
 
-const Options = styled.div`
+const StyledForm = styled(Form)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
 `;

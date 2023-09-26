@@ -52,4 +52,5 @@ const StyledLink = styled(Link)`
 
 const StyledRating = styled.div`
   margin-top: 8px;
+  padding-right: 15px;
 `;

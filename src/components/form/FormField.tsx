@@ -17,6 +17,7 @@ export const FormField = ({ name, children, label }: FormFieldProps) => {
             validateStatus={fieldProps.meta.touched && Boolean(fieldProps.meta.error) ? 'error' : 'success'}
             help={fieldProps.meta.touched && fieldProps.meta.error}
             label={label}
+            style={{ width: '100%' }}
           >
             {children(fieldProps)}
           </AntForm.Item>

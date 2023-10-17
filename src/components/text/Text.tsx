@@ -3,15 +3,13 @@ import styled from '@emotion/styled';
 
 import { FontSizes } from '~utils/styles/fontSizes';
 
-export const Text = ({
-  color,
-  styleName,
-  children,
-}: {
+interface TextProps {
   color: string;
   styleName: keyof typeof options;
   children?: React.ReactNode;
-}) => {
+}
+
+export const Text = ({ color, styleName, children }: TextProps) => {
   const styles = options[styleName];
   return (
     <StyledText styles={styles} color={color}>
@@ -20,28 +18,24 @@ export const Text = ({
   );
 };
 
-type StyledTextProps = {
-  styles: any;
+interface StyledTextProps {
+  styles: {
+    font_weight: number;
+    font_size: number;
+    line_height: number;
+  };
   color: string;
-};
+}
 
 const StyledText = styled.p<StyledTextProps>`
   margin: 0;
-  font-weight: ${({ styles }) => {
-    return `${styles.font_weight}`;
-  }};
-  font-size: ${({ styles }) => {
-    return `${styles.font_size}px`;
-  }};
-  line-height: ${({ styles }) => {
-    return `${styles.line_height}px`;
-  }};
-  color: ${({ color }) => {
-    return `${color}`;
-  }};
+  font-weight: ${({ styles }) => styles.font_weight};
+  font-size: ${({ styles }) => `${styles.font_size}px`};
+  line-height: ${({ styles }) => `${styles.line_height}px`};
+  color: ${({ color }) => color};
 `;
 
-const options: Record<string, object> = {
+const options = {
   extra_bold_1: FontSizes.extra_bold_1,
   extra_bold_2: FontSizes.extra_bold_2,
   extra_bold_3: FontSizes.extra_bold_3,

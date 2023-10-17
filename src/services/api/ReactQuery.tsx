@@ -9,8 +9,9 @@ interface QueryProviderProps {
 export const QueryProvider: FC<QueryProviderProps> = ({ children }) => {
   const onError = (e: any) => {
     const message = e?.message === 'Unexpected end of JSON input' ? 'Failed to execute the request' : e?.message;
+    const errorMessage = message ?? e?.error ?? 'An error occurred';
 
-    notification.error({ message: message ?? e?.error, placement: 'topRight', duration: 0 });
+    notification.error({ message: errorMessage, placement: 'topRight', duration: 0 });
   };
 
   const config: QueryClientConfig = {

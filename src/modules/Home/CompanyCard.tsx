@@ -7,16 +7,15 @@ import { Text, Rating } from '~components';
 import { useNavigate } from '~services/router/hooks';
 import { routeNames } from '~services/router';
 
-export const CompanyCard = ({
-  name,
-  rating,
-  children,
-}: {
+interface CompanyCardProps {
   name: string;
   rating: number;
   children?: React.ReactNode;
-}) => {
+}
+
+export const CompanyCard = ({ name, rating, children }: CompanyCardProps) => {
   const navigate = useNavigate();
+
   const handleClick = () => {
     navigate({ name: routeNames.company, params: { company: name } });
   };

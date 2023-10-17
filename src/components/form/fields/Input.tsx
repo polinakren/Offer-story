@@ -66,7 +66,6 @@ const StyledInput = styled(AntInput)<AntInputProps>`
     border: 2px solid ${Palette.c_primary_600} !important;
   }
   
-  
   input {
     background-color: ${Palette.c_primary_50};
     color: ${Palette.c_secondary_800};

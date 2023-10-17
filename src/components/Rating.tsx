@@ -6,20 +6,35 @@ import halfStar from '~assets/images/icons/halfStar.svg';
 import emptyStar from '~assets/images/icons/emptyStar.svg';
 import { Text } from '~components';
 
-export const Rating = ({ rating, color, size }: { rating: number; color: string; size: 'small' | 'large' }) => {
-  const full = Math.floor(rating);
-  const stars = Array.from({ length: 5 }, (_, i) => {
-    if (i < full) {
-      return { id: i + 1, src: star };
-    } else if (i === full && rating % 1) {
-      return { id: i + 1, src: halfStar };
+interface RatingProps {
+  rating: number;
+  color: string;
+  size: 'small' | 'large';
+}
+
+interface Star {
+  id: number;
+  src: string;
+}
+
+export const Rating = ({ rating, color, size }: RatingProps) => {
+  const stars: Star[] = [];
+
+  for (let i = 1; i <= 5; i++) {
+    if (i <= rating) {
+      stars.push({ id: i, src: star });
+    } else if (i - 0.5 <= rating) {
+      stars.push({ id: i, src: halfStar });
+    } else {
+      stars.push({ id: i, src: emptyStar });
     }
-    return { id: i + 1, src: emptyStar };
-  });
+  }
+
+  const textSize = size === 'large' ? 'medium_3' : 'medium_1';
 
   return (
     <Spacer>
-      <Text styleName={size === 'large' ? 'medium_3' : 'medium_1'} color={color}>
+      <Text styleName={textSize} color={color}>
         {rating.toFixed(1)}
       </Text>
       {stars.map(mark => (

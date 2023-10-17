@@ -3,7 +3,7 @@ import React from 'react';
 
 import google from '~assets/images/icons/google.svg';
 import { Palette } from '~utils/styles/Palette';
-import { Text, Rating } from '~components';
+import { Text, Rating } from './index';
 import { useNavigate } from '~services/router/hooks';
 import { routeNames } from '~services/router';
 

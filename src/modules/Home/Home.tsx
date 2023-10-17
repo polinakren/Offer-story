@@ -2,9 +2,8 @@ import styled from '@emotion/styled';
 
 import starStruck from '~assets/images/icons/Star-struck.svg';
 import search from '~assets/images/icons/Search.svg';
-import { Button, Form, Input, Text } from '~components';
+import { Button, Form, Input, Text, CompanyCard } from '~components';
 import { Palette } from '~utils/styles/Palette';
-import { CompanyCard } from '~modules/Home/CompanyCard';
 
 export default function Home() {
   const handleButtonClick = () => {
